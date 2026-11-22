@@ -1,0 +1,98 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Retirement Calculator | Retirement Calculator</title>
+<meta name="description" content="Project your retirement savings from your age, current savings, monthly contributions and expected return.">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<style>
+body{font-family:Georgia,'Times New Roman',serif;color:#1e293b;background:#f8fafc}
+a{color:#0f766e}header{background:#134e4a;color:#fff;padding:16px 0}
+.header-in{max-width:1020px;margin:0 auto;padding:0 20px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}
+.logo{font-size:clamp(22px,5vw,27px);font-weight:700;color:#fff;text-decoration:none}
+.logo span{color:#5eead4}
+nav a{color:#ccfbf1;margin:0 8px;font-weight:600;font-size:15px;text-decoration:none}
+nav a:hover{color:#fff;text-decoration:underline}
+.hero{background:#0f766e;color:#fff;padding:clamp(28px,6vw,50px) 20px 42px}
+.hero-in{max-width:1020px;margin:0 auto}
+.hero h1{font-size:clamp(28px,6vw,40px);line-height:1.2;margin:0 0 10px;max-width:640px}
+.hero p{font-size:clamp(15px,3vw,18px);max-width:640px;margin:0 0 22px;color:#ccfbf1}
+.calc{background:#fff;color:#1e293b;max-width:600px;padding:clamp(18px,4vw,28px);border-radius:10px;box-shadow:0 12px 30px rgba(0,0,0,.25);text-align:left}
+.calc h2{font-size:20px;margin:0 0 14px;color:#134e4a}
+.field{margin-bottom:14px}.field label{display:block;font-size:14px;font-weight:700;margin-bottom:5px;color:#475569}
+.btn{background:#0d9488;color:#fff}.btn:hover{background:#0f766e}
+.result{background:#f0fdfa;border:1px solid #5eead4}
+.card{background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:22px;margin-bottom:20px}
+.acard{background:#fff;border:1px solid #e2e8f0}
+.acard h3 a{color:#134e4a;text-decoration:none}.acard p{color:#64748b}
+.toolgrid a{background:#fff;border:1px solid #e2e8f0;color:#134e4a}
+.toolgrid a:hover{border-color:#0d9488;background:#f0fdfa}
+.tip{background:#f0fdfa;border-left:4px solid #0d9488}
+h2{color:#134e4a}footer{color:#64748b;font-size:14px;margin-top:30px;padding:20px;text-align:center;border-top:1px solid #e2e8f0}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;line-height:1.65;font-size:16px}
+img{max-width:100%;height:auto}
+input,select,textarea,button{font-family:inherit;font-size:16px}
+input,select{width:100%;min-height:44px;padding:11px 12px;border:1px solid #cbd5e1;border-radius:8px}
+button,.btn{min-height:44px;padding:12px 22px;border:0;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;text-decoration:none;display:inline-block;text-align:center}
+.wrap{max-width:1020px;margin:0 auto;padding:0 20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px}
+.acard{overflow:hidden;border-radius:12px}
+.acard img{width:100%;height:160px;object-fit:cover;display:block}
+.acard div{padding:14px}
+.acard h3{margin:0 0 6px;font-size:16px;line-height:1.35}
+.acard p{margin:0;font-size:14px}
+.toolgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px}
+.toolgrid a{padding:18px;border-radius:12px;text-decoration:none;display:block;font-weight:700}
+.result{padding:16px;border-radius:10px;margin-top:16px}
+.result .big{font-size:clamp(22px,5vw,28px);font-weight:800}
+.tip{padding:14px 16px;border-radius:10px;margin:18px 0}
+.faq h3{font-size:16px;margin:18px 0 4px}
+article img.heroimg{width:100%;max-height:380px;object-fit:cover;border-radius:12px;display:block}
+@media(max-width:640px){
+  .wrap{padding:0 14px}
+  .grid,.toolgrid{grid-template-columns:1fr}
+  .acard img{height:180px}
+  nav a{margin:0 6px}
+}
+@media(max-width:480px){
+  body{font-size:16px}
+  .wrap{padding:0 12px}
+  h1{font-size:26px !important}
+  .btn,button{width:100%}
+  .acard img{height:170px}
+}
+</style></head>
+<body><header><div class="header-in"><a class="logo" href="../index.html">Retirement Calculator</a><nav><a href="../index.html">Home</a><a href="../tools/retirement-calculator.html">Calculator</a><a href="../about.html">About</a><a href="../contact.html">Contact</a></nav></div></header><main class="wrap"><div class="card" style="margin-top:20px"><h1>Retirement Calculator</h1><p>Project your retirement savings from your age, current savings, monthly contributions and expected return.</p><div class="field"><label for="age">Your current age</label><input type="number" id="age" value="30" min="18" max="70"></div>
+<div class="field"><label for="rage">Planned retirement age</label><input type="number" id="rage" value="65" min="40" max="80"></div>
+<div class="field"><label for="cur">Current savings ($)</label><input type="number" id="cur" value="10000" min="0" max="100000000"></div>
+<div class="field"><label for="mon">Monthly contribution ($)</label><input type="number" id="mon" value="500" min="0" max="100000"></div>
+<div class="field"><label for="ret">Expected annual return (%)</label><input type="number" id="ret" value="7" min="0" max="15" step="0.5"></div>
+<div class="field"><label for="inf">Expected annual inflation (%)</label><input type="number" id="inf" value="3" min="0" max="10" step="0.5"></div>
+<button class="btn" type="button" onclick="calcRet()">Project My Savings</button>
+<div id="out" class="result" style="display:none"></div>
+<script>
+function fmt(n){return '$'+Math.round(n).toLocaleString();}
+function calcRet(){
+  var age=parseFloat(document.getElementById('age').value);
+  var rage=parseFloat(document.getElementById('rage').value);
+  var cur=parseFloat(document.getElementById('cur').value);
+  var mon=parseFloat(document.getElementById('mon').value);
+  var ret=parseFloat(document.getElementById('ret').value)/100;
+  var inf=parseFloat(document.getElementById('inf').value)/100;
+  var out=document.getElementById('out');
+  if(isNaN(age)||isNaN(rage)||isNaN(cur)||isNaN(mon)||isNaN(ret)||isNaN(inf)||age<18||age>70||rage<40||rage>80||rage<=age||cur<0||mon<0){
+    out.style.display='block';out.innerHTML='Please check your entries: retirement age must be above your current age, and all numbers must be in range.';return;}
+  var years=rage-age, months=years*12;
+  var m=ret/12;
+  var fv = m===0 ? cur+mon*months : cur*Math.pow(1+m,months)+mon*(Math.pow(1+m,months)-1)/m;
+  var real=fv/Math.pow(1+inf,years);
+  var totalIn=cur+mon*months;
+  var growth=fv-totalIn;
+  out.style.display='block';
+  out.innerHTML='<p>At age '+rage+', after '+years+' years, your savings are projected to be</p><p class="big">'+fmt(fv)+'</p>'
+   +'<p>In present-day money (adjusted for '+document.getElementById('inf').value+'% inflation): about <strong>'+fmt(real)+'</strong>.</p>'
+   +'<p>You will have contributed <strong>'+fmt(totalIn)+'</strong> in total, and investment growth adds about <strong>'+fmt(growth)+'</strong>.</p>'
+   +'<p>This is a projection, not a promise: real returns vary year to year, and the assumed '+document.getElementById('ret').value+'% return is an example you can change. Starting earlier matters more than the exact rate, because growth compounds over time.</p>';
+}
+</script><p style="font-size:14px;color:#666;margin-top:14px">Note: results are projections based on the assumptions you enter, such as the annual return and inflation rate, and are not financial advice. Real investment returns vary and are not guaranteed. For personal financial decisions, consider speaking to a qualified financial adviser.</p></div><p><a href="../index.html">&larr; Back to home</a> | <a href="retirement-calculator.html">Main calculator</a></p></main><footer><p>Retirement Calculator — free online calculators and practical guides. <a href="../about.html">About</a> | <a href="../contact.html">Contact</a> | <a href="../privacy.html">Privacy Policy</a> | <a href="../disclaimer.html">Disclaimer</a></p><p>Results are estimates for general information only.</p></footer></body></html>
