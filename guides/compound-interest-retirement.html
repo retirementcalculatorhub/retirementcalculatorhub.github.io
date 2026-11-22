@@ -1,0 +1,78 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Compound Interest and Retirement | Retirement Calculator</title>
+<meta name="description" content="How compounding turns small monthly savings into a large retirement pot, with worked examples over 10, 20 and 30 years.">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<style>
+body{font-family:Georgia,'Times New Roman',serif;color:#1e293b;background:#f8fafc}
+a{color:#0f766e}header{background:#134e4a;color:#fff;padding:16px 0}
+.header-in{max-width:1020px;margin:0 auto;padding:0 20px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}
+.logo{font-size:clamp(22px,5vw,27px);font-weight:700;color:#fff;text-decoration:none}
+.logo span{color:#5eead4}
+nav a{color:#ccfbf1;margin:0 8px;font-weight:600;font-size:15px;text-decoration:none}
+nav a:hover{color:#fff;text-decoration:underline}
+.hero{background:#0f766e;color:#fff;padding:clamp(28px,6vw,50px) 20px 42px}
+.hero-in{max-width:1020px;margin:0 auto}
+.hero h1{font-size:clamp(28px,6vw,40px);line-height:1.2;margin:0 0 10px;max-width:640px}
+.hero p{font-size:clamp(15px,3vw,18px);max-width:640px;margin:0 0 22px;color:#ccfbf1}
+.calc{background:#fff;color:#1e293b;max-width:600px;padding:clamp(18px,4vw,28px);border-radius:10px;box-shadow:0 12px 30px rgba(0,0,0,.25);text-align:left}
+.calc h2{font-size:20px;margin:0 0 14px;color:#134e4a}
+.field{margin-bottom:14px}.field label{display:block;font-size:14px;font-weight:700;margin-bottom:5px;color:#475569}
+.btn{background:#0d9488;color:#fff}.btn:hover{background:#0f766e}
+.result{background:#f0fdfa;border:1px solid #5eead4}
+.card{background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:22px;margin-bottom:20px}
+.acard{background:#fff;border:1px solid #e2e8f0}
+.acard h3 a{color:#134e4a;text-decoration:none}.acard p{color:#64748b}
+.toolgrid a{background:#fff;border:1px solid #e2e8f0;color:#134e4a}
+.toolgrid a:hover{border-color:#0d9488;background:#f0fdfa}
+.tip{background:#f0fdfa;border-left:4px solid #0d9488}
+h2{color:#134e4a}footer{color:#64748b;font-size:14px;margin-top:30px;padding:20px;text-align:center;border-top:1px solid #e2e8f0}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;line-height:1.65;font-size:16px}
+img{max-width:100%;height:auto}
+input,select,textarea,button{font-family:inherit;font-size:16px}
+input,select{width:100%;min-height:44px;padding:11px 12px;border:1px solid #cbd5e1;border-radius:8px}
+button,.btn{min-height:44px;padding:12px 22px;border:0;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;text-decoration:none;display:inline-block;text-align:center}
+.wrap{max-width:1020px;margin:0 auto;padding:0 20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px}
+.acard{overflow:hidden;border-radius:12px}
+.acard img{width:100%;height:160px;object-fit:cover;display:block}
+.acard div{padding:14px}
+.acard h3{margin:0 0 6px;font-size:16px;line-height:1.35}
+.acard p{margin:0;font-size:14px}
+.toolgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px}
+.toolgrid a{padding:18px;border-radius:12px;text-decoration:none;display:block;font-weight:700}
+.result{padding:16px;border-radius:10px;margin-top:16px}
+.result .big{font-size:clamp(22px,5vw,28px);font-weight:800}
+.tip{padding:14px 16px;border-radius:10px;margin:18px 0}
+.faq h3{font-size:16px;margin:18px 0 4px}
+article img.heroimg{width:100%;max-height:380px;object-fit:cover;border-radius:12px;display:block}
+@media(max-width:640px){
+  .wrap{padding:0 14px}
+  .grid,.toolgrid{grid-template-columns:1fr}
+  .acard img{height:180px}
+  nav a{margin:0 6px}
+}
+@media(max-width:480px){
+  body{font-size:16px}
+  .wrap{padding:0 12px}
+  h1{font-size:26px !important}
+  .btn,button{width:100%}
+  .acard img{height:170px}
+}
+</style></head>
+<body><header><div class="header-in"><a class="logo" href="../index.html">Retirement Calculator</a><nav><a href="../index.html">Home</a><a href="../tools/retirement-calculator.html">Calculator</a><a href="../about.html">About</a><a href="../contact.html">Contact</a></nav></div></header><main class="wrap"><article class="card" style="margin-top:20px"><img class="heroimg" src="../images/compound-interest-retirement.jpg" alt="Compound Interest and Retirement">
+<h1>Compound Interest and Retirement</h1><p><em>How compounding turns small monthly savings into a large retirement pot, with worked examples over 10, 20 and 30 years.</em></p>
+<p>Compound interest is the reason starting early matters more than saving large amounts late. It means your returns earn returns of their own, so growth accelerates over time. The effect is slow at first and dramatic later, which is why the first years feel unrewarding and the last years feel magical. This guide explains the maths with worked examples, so you can see exactly what time does to money.</p>
+<h2>How compounding works</h2><p>When you invest money, it earns a return. The next year, you earn a return not just on the original money but on the previous return as well. That is compounding, and it is the difference between simple interest, which pays the same amount every year, and compound growth, which pays more every year. Over a short period the difference is small. Over decades it is enormous, because the growth itself keeps growing.</p>
+<h2>Worked example: 200 dollars a month</h2><p>Save 200 dollars a month from age 30 to 65, at a 7 percent annual return, and you contribute 84,000 dollars in total. The projected total at 65 is about 360,000 dollars, so growth adds about 276,000, more than triple your contributions. Start at 40 instead, and the same 200 a month for 25 years contributes 60,000 and grows to about 162,000. Start at 50, and 15 years of contributions, 36,000, grows to about 63,000. The monthly amount is the same in all three cases; the difference is entirely time.</p>
+<h2>Worked example: the cost of waiting</h2><p>Waiting ten years costs more than ten years of contributions. A person who saves 500 a month from 30 to 65 contributes 210,000 and, at 7 percent, ends with about 900,000. A person who saves the same 500 a month from 40 to 65 contributes 150,000 and ends with about 405,000. The ten-year delay costs about 495,000 in the final total, even though the late starter saved only 60,000 less. The missing decade is the most expensive decade, because it is the one where compounding had the longest to run.</p>
+<h2>Why the early years feel slow</h2><p>In the first years, growth is small because the balance is small: a 7 percent return on 10,000 dollars is only 700 dollars. Many people give up at this stage, feeling that saving is pointless. But the balance grows, and so does the annual growth: at 100,000, the same 7 percent is 7,000 a year, and at 500,000 it is 35,000 a year, more than many people save in a year. The curve is slow, then steep, and the steep part only arrives if you stay invested through the slow part.</p>
+<h2>What compounding cannot do</h2><p>Compounding needs time and a positive return, and neither is guaranteed. Real returns vary: some years are negative, and a market fall early in retirement can hurt more than one late in working life. Inflation eats into the result, which is why the calculator shows the value in today&#x27;s money. Fees also matter: a 1 percent annual fee can cut the final total by a fifth over 30 years, so low-cost options are worth seeking. Compounding is powerful, but it is not magic, and the assumptions behind any projection should be tested with lower returns.</p>
+<h2>The rule of 72</h2><p>A quick way to grasp compounding is the rule of 72: divide 72 by the annual return to find how many years it takes for money to double. At 7 percent, money doubles in about 10 years. At 5 percent, in about 14 years. At 10 percent, in about 7 years. A 30-year-old with 50,000 saved, at 7 percent, will see it double to 100,000 by about 40, to 200,000 by about 50, and to 400,000 by about 60, without adding another dollar. The rule is approximate, but it makes the power of time visible in a single number, and it explains why the last decade of saving adds the most: the balance is largest, so the doubling adds the most dollars. Keep the rule in mind whenever you wonder whether starting now is worth it.</p>
+<div class="tip"><strong>Tip:</strong> Waiting ten years costs far more than ten years of contributions: saving 500 a month from 30 gives about 900,000 by 65 at 7 percent, but from 40 it gives about 405,000.</div>
+<h2>Frequently Asked Questions</h2><div class="faq"><h3>What is compound interest?</h3><p>Returns earning returns of their own, so growth accelerates over time. The effect is small at first and large over decades.</p><h3>Why does starting early matter so much?</h3><p>Because compounding needs time. A decade of delay can cost hundreds of thousands in the final total, even with the same monthly saving.</p><h3>Is a 7 percent return guaranteed?</h3><p>No. Real returns vary year to year, and some years are negative. Use 7 percent as a planning example and test lower figures too.</p></div>
+<h2>Related Guides</h2><ul><li><a href="starting-retirement-savings-20s.html">Starting Retirement Savings in Your 20s</a></li><li><a href="starting-retirement-savings-40s.html">Starting Retirement Savings in Your 40s</a></li><li><a href="retirement-savings-by-age-guide.html">Retirement Savings by Age</a></li></ul>
+<p><a href="../index.html">&larr; Back to home</a></p></article></main><footer><p>Retirement Calculator — free online calculators and practical guides. <a href="../about.html">About</a> | <a href="../contact.html">Contact</a> | <a href="../privacy.html">Privacy Policy</a> | <a href="../disclaimer.html">Disclaimer</a></p><p>Results are estimates for general information only.</p></footer></body></html>
