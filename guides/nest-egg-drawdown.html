@@ -1,0 +1,78 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nest Egg Drawdown: Making Savings Last | Retirement Calculator</title>
+<meta name="description" content="How to withdraw from retirement savings without running out, the 4 percent guideline, and how inflation changes the plan.">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<style>
+body{font-family:Georgia,'Times New Roman',serif;color:#1e293b;background:#f8fafc}
+a{color:#0f766e}header{background:#134e4a;color:#fff;padding:16px 0}
+.header-in{max-width:1020px;margin:0 auto;padding:0 20px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}
+.logo{font-size:clamp(22px,5vw,27px);font-weight:700;color:#fff;text-decoration:none}
+.logo span{color:#5eead4}
+nav a{color:#ccfbf1;margin:0 8px;font-weight:600;font-size:15px;text-decoration:none}
+nav a:hover{color:#fff;text-decoration:underline}
+.hero{background:#0f766e;color:#fff;padding:clamp(28px,6vw,50px) 20px 42px}
+.hero-in{max-width:1020px;margin:0 auto}
+.hero h1{font-size:clamp(28px,6vw,40px);line-height:1.2;margin:0 0 10px;max-width:640px}
+.hero p{font-size:clamp(15px,3vw,18px);max-width:640px;margin:0 0 22px;color:#ccfbf1}
+.calc{background:#fff;color:#1e293b;max-width:600px;padding:clamp(18px,4vw,28px);border-radius:10px;box-shadow:0 12px 30px rgba(0,0,0,.25);text-align:left}
+.calc h2{font-size:20px;margin:0 0 14px;color:#134e4a}
+.field{margin-bottom:14px}.field label{display:block;font-size:14px;font-weight:700;margin-bottom:5px;color:#475569}
+.btn{background:#0d9488;color:#fff}.btn:hover{background:#0f766e}
+.result{background:#f0fdfa;border:1px solid #5eead4}
+.card{background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:22px;margin-bottom:20px}
+.acard{background:#fff;border:1px solid #e2e8f0}
+.acard h3 a{color:#134e4a;text-decoration:none}.acard p{color:#64748b}
+.toolgrid a{background:#fff;border:1px solid #e2e8f0;color:#134e4a}
+.toolgrid a:hover{border-color:#0d9488;background:#f0fdfa}
+.tip{background:#f0fdfa;border-left:4px solid #0d9488}
+h2{color:#134e4a}footer{color:#64748b;font-size:14px;margin-top:30px;padding:20px;text-align:center;border-top:1px solid #e2e8f0}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;line-height:1.65;font-size:16px}
+img{max-width:100%;height:auto}
+input,select,textarea,button{font-family:inherit;font-size:16px}
+input,select{width:100%;min-height:44px;padding:11px 12px;border:1px solid #cbd5e1;border-radius:8px}
+button,.btn{min-height:44px;padding:12px 22px;border:0;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;text-decoration:none;display:inline-block;text-align:center}
+.wrap{max-width:1020px;margin:0 auto;padding:0 20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px}
+.acard{overflow:hidden;border-radius:12px}
+.acard img{width:100%;height:160px;object-fit:cover;display:block}
+.acard div{padding:14px}
+.acard h3{margin:0 0 6px;font-size:16px;line-height:1.35}
+.acard p{margin:0;font-size:14px}
+.toolgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px}
+.toolgrid a{padding:18px;border-radius:12px;text-decoration:none;display:block;font-weight:700}
+.result{padding:16px;border-radius:10px;margin-top:16px}
+.result .big{font-size:clamp(22px,5vw,28px);font-weight:800}
+.tip{padding:14px 16px;border-radius:10px;margin:18px 0}
+.faq h3{font-size:16px;margin:18px 0 4px}
+article img.heroimg{width:100%;max-height:380px;object-fit:cover;border-radius:12px;display:block}
+@media(max-width:640px){
+  .wrap{padding:0 14px}
+  .grid,.toolgrid{grid-template-columns:1fr}
+  .acard img{height:180px}
+  nav a{margin:0 6px}
+}
+@media(max-width:480px){
+  body{font-size:16px}
+  .wrap{padding:0 12px}
+  h1{font-size:26px !important}
+  .btn,button{width:100%}
+  .acard img{height:170px}
+}
+</style></head>
+<body><header><div class="header-in"><a class="logo" href="../index.html">Retirement Calculator</a><nav><a href="../index.html">Home</a><a href="../tools/retirement-calculator.html">Calculator</a><a href="../about.html">About</a><a href="../contact.html">Contact</a></nav></div></header><main class="wrap"><article class="card" style="margin-top:20px"><img class="heroimg" src="../images/nest-egg-drawdown.jpg" alt="Nest Egg Drawdown: Making Savings Last">
+<h1>Nest Egg Drawdown: Making Savings Last</h1><p><em>How to withdraw from retirement savings without running out, the 4 percent guideline, and how inflation changes the plan.</em></p>
+<p>Saving for retirement is only half the job. The other half is drawing the money down without running out, which is harder than it sounds, because you do not know how long you will live or what returns the future holds. This guide explains the standard approach, the 4 percent guideline, and how to adapt it to your own situation.</p>
+<h2>The basic problem</h2><p>In retirement, your savings must produce income for an unknown number of years, while markets rise and fall. Withdraw too much and the money runs out. Withdraw too little and you live more frugally than you needed to. The balance is struck by choosing a withdrawal rate, a percentage of the starting balance taken each year, and adjusting it as markets and inflation change. The most famous guideline is 4 percent, and it is worth understanding where it comes from.</p>
+<h2>The 4 percent guideline</h2><p>The 4 percent rule comes from a study of US market history, which found that withdrawing 4 percent of the starting balance in the first year, then adjusting that amount for inflation each year, lasted 30 years in most historical scenarios. For a million-dollar pot, that is 40,000 dollars in the first year, rising with inflation. It is a guideline, not a guarantee: it depends on the portfolio, the time period, and the country, and it can fail if returns are poor early in retirement, when the balance is largest and withdrawals do the most damage.</p>
+<h2>Worked example</h2><p>Take a 65-year-old with 800,000 dollars saved, planning for 30 years, with a 4 percent return during retirement. Withdrawing a fixed amount each month that exactly uses up the pot over 30 years gives about 3,820 dollars a month, or about 45,800 a year. That is more than the 4 percent guideline&#x27;s 32,000, because the calculation assumes the pot is fully used up, while the guideline is designed to survive bad markets. The difference is a safety margin, and it shows why the guideline is cautious by design. Use the drawdown planner to test your own numbers.</p>
+<h2>Inflation and withdrawals</h2><p>Inflation is the quiet threat to a drawdown plan. At 3 percent inflation, prices double in about 24 years, so a fixed withdrawal buys half as much at 89 as it did at 65. If you raise withdrawals with inflation, the starting amount must be lower, because the pot must fund rising payments. If you keep withdrawals fixed, the pot lasts longer but your spending power falls. Most plans raise withdrawals with inflation, and the 4 percent guideline assumes you do. Check the planner&#x27;s inflation figures to see the effect on your own numbers.</p>
+<h2>Adapting as you go</h2><p>No drawdown plan survives unchanged for 30 years. Review it annually: if markets have done well, you can withdraw a little more or keep the same and build a buffer. If markets have done badly, especially in the first years of retirement, cut back temporarily, because early losses do the most damage. Consider guaranteed income, such as an annuity or a state pension, to cover essential spending, so market falls do not threaten your basic needs. And keep an emergency reserve outside the main pot, so a surprise expense does not force a large withdrawal at a bad time.</p>
+<h2>A drawdown plan, year by year</h2><p>Take a 65-year-old with 800,000 dollars, withdrawing 32,000 a year, 4 percent, and adjusting for 3 percent inflation. In year one, the withdrawal is 32,000. In year ten, it is about 41,800, because prices have risen. In year twenty, it is about 56,200. In year thirty, it is about 75,600. The pot must fund rising payments, which is why the starting rate is cautious: the same pot withdrawn at a fixed 32,000 a year, without inflation adjustment, would last longer but buy less each year. If markets return 4 percent a year, the pot lasts about 30 years at the rising withdrawal. If returns are lower, it runs out sooner, which is why the plan is reviewed annually and the withdrawal is cut back after bad years.</p>
+<div class="tip"><strong>Tip:</strong> The 4 percent guideline means withdrawing 4 percent of your starting balance in year one, then adjusting for inflation — for a million-dollar pot, 40,000 dollars in the first year.</div>
+<h2>Frequently Asked Questions</h2><div class="faq"><h3>What is the 4 percent rule?</h3><p>Withdraw 4 percent of your starting balance in the first year, then adjust for inflation each year. It has historically lasted about 30 years in many scenarios, but it is a guideline, not a guarantee.</p><h3>How does inflation affect withdrawals?</h3><p>At 3 percent inflation, prices double in about 24 years. Raising withdrawals with inflation means the starting amount must be lower.</p><h3>What if markets fall early in retirement?</h3><p>Cut back temporarily. Early losses do the most damage, because the balance is largest and withdrawals compound the fall.</p></div>
+<h2>Related Guides</h2><ul><li><a href="inflation-and-retirement.html">Inflation and Retirement</a></li><li><a href="retirement-income-needs.html">Retirement Income Needs</a></li><li><a href="emergency-fund-before-retirement.html">Emergency Fund Before Retirement Saving</a></li></ul>
+<p><a href="../index.html">&larr; Back to home</a></p></article></main><footer><p>Retirement Calculator — free online calculators and practical guides. <a href="../about.html">About</a> | <a href="../contact.html">Contact</a> | <a href="../privacy.html">Privacy Policy</a> | <a href="../disclaimer.html">Disclaimer</a></p><p>Results are estimates for general information only.</p></footer></body></html>

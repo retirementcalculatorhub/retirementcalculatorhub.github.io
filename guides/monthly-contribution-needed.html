@@ -1,0 +1,78 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How Much to Save Each Month for Retirement | Retirement Calculator</title>
+<meta name="description" content="How to calculate the monthly contribution that reaches your target, and how small increases change the outcome.">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<style>
+body{font-family:Georgia,'Times New Roman',serif;color:#1e293b;background:#f8fafc}
+a{color:#0f766e}header{background:#134e4a;color:#fff;padding:16px 0}
+.header-in{max-width:1020px;margin:0 auto;padding:0 20px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}
+.logo{font-size:clamp(22px,5vw,27px);font-weight:700;color:#fff;text-decoration:none}
+.logo span{color:#5eead4}
+nav a{color:#ccfbf1;margin:0 8px;font-weight:600;font-size:15px;text-decoration:none}
+nav a:hover{color:#fff;text-decoration:underline}
+.hero{background:#0f766e;color:#fff;padding:clamp(28px,6vw,50px) 20px 42px}
+.hero-in{max-width:1020px;margin:0 auto}
+.hero h1{font-size:clamp(28px,6vw,40px);line-height:1.2;margin:0 0 10px;max-width:640px}
+.hero p{font-size:clamp(15px,3vw,18px);max-width:640px;margin:0 0 22px;color:#ccfbf1}
+.calc{background:#fff;color:#1e293b;max-width:600px;padding:clamp(18px,4vw,28px);border-radius:10px;box-shadow:0 12px 30px rgba(0,0,0,.25);text-align:left}
+.calc h2{font-size:20px;margin:0 0 14px;color:#134e4a}
+.field{margin-bottom:14px}.field label{display:block;font-size:14px;font-weight:700;margin-bottom:5px;color:#475569}
+.btn{background:#0d9488;color:#fff}.btn:hover{background:#0f766e}
+.result{background:#f0fdfa;border:1px solid #5eead4}
+.card{background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:22px;margin-bottom:20px}
+.acard{background:#fff;border:1px solid #e2e8f0}
+.acard h3 a{color:#134e4a;text-decoration:none}.acard p{color:#64748b}
+.toolgrid a{background:#fff;border:1px solid #e2e8f0;color:#134e4a}
+.toolgrid a:hover{border-color:#0d9488;background:#f0fdfa}
+.tip{background:#f0fdfa;border-left:4px solid #0d9488}
+h2{color:#134e4a}footer{color:#64748b;font-size:14px;margin-top:30px;padding:20px;text-align:center;border-top:1px solid #e2e8f0}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;line-height:1.65;font-size:16px}
+img{max-width:100%;height:auto}
+input,select,textarea,button{font-family:inherit;font-size:16px}
+input,select{width:100%;min-height:44px;padding:11px 12px;border:1px solid #cbd5e1;border-radius:8px}
+button,.btn{min-height:44px;padding:12px 22px;border:0;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;text-decoration:none;display:inline-block;text-align:center}
+.wrap{max-width:1020px;margin:0 auto;padding:0 20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px}
+.acard{overflow:hidden;border-radius:12px}
+.acard img{width:100%;height:160px;object-fit:cover;display:block}
+.acard div{padding:14px}
+.acard h3{margin:0 0 6px;font-size:16px;line-height:1.35}
+.acard p{margin:0;font-size:14px}
+.toolgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px}
+.toolgrid a{padding:18px;border-radius:12px;text-decoration:none;display:block;font-weight:700}
+.result{padding:16px;border-radius:10px;margin-top:16px}
+.result .big{font-size:clamp(22px,5vw,28px);font-weight:800}
+.tip{padding:14px 16px;border-radius:10px;margin:18px 0}
+.faq h3{font-size:16px;margin:18px 0 4px}
+article img.heroimg{width:100%;max-height:380px;object-fit:cover;border-radius:12px;display:block}
+@media(max-width:640px){
+  .wrap{padding:0 14px}
+  .grid,.toolgrid{grid-template-columns:1fr}
+  .acard img{height:180px}
+  nav a{margin:0 6px}
+}
+@media(max-width:480px){
+  body{font-size:16px}
+  .wrap{padding:0 12px}
+  h1{font-size:26px !important}
+  .btn,button{width:100%}
+  .acard img{height:170px}
+}
+</style></head>
+<body><header><div class="header-in"><a class="logo" href="../index.html">Retirement Calculator</a><nav><a href="../index.html">Home</a><a href="../tools/retirement-calculator.html">Calculator</a><a href="../about.html">About</a><a href="../contact.html">Contact</a></nav></div></header><main class="wrap"><article class="card" style="margin-top:20px"><img class="heroimg" src="../images/monthly-contribution-needed.jpg" alt="How Much to Save Each Month for Retirement">
+<h1>How Much to Save Each Month for Retirement</h1><p><em>How to calculate the monthly contribution that reaches your target, and how small increases change the outcome.</em></p>
+<p>The monthly contribution is the number that turns a retirement target into a habit. It is also the number most people get wrong, because they guess rather than calculate. This guide explains how to work it out, how sensitive it is to time and return, and how to make the figure affordable.</p>
+<h2>How the calculation works</h2><p>The monthly contribution needed depends on four things: your target, your current savings, the years until retirement, and the expected return. The calculator works backwards: it grows your current savings to retirement, subtracts that from the target, and divides the remainder into monthly payments that grow at the assumed return. The result is the amount to save each month, every month, until retirement. Change any input and the answer changes, which is why the calculator is more useful than a rule of thumb.</p>
+<h2>Worked example</h2><p>A 35-year-old with 20,000 saved wants 1,000,000 by 65, at a 7 percent return. Their savings grow to about 162,000 on their own, leaving 838,000 to come from contributions. The monthly amount needed is about 690 dollars. If they wait until 45 to start, the same target needs about 1,770 a month, because there are only 20 years left and the current savings grow less. If they retire at 67 instead of 65, the figure falls to about 570 a month. Time is the biggest lever.</p>
+<h2>How small increases help</h2><p>A small increase in the monthly amount makes a large difference over decades. Saving 500 a month from 30 to 65, at 7 percent, gives about 900,000 dollars. Saving 600 a month gives about 1,080,000, an extra 180,000 for 100 dollars a month. Saving 400 gives about 720,000. The relationship is nearly linear: each extra 100 a month adds roughly 180,000 to the final total over 35 years. That is why increasing contributions with each pay rise is so effective: the increase is painless, because you never had the money to spend, and it compounds for decades.</p>
+<h2>Making the figure affordable</h2><p>If the calculated figure is more than you can afford, do not abandon the plan. Start with what you can afford, even half the figure, and increase it by 1 percent of your income each year. Use pay rises and bonuses: direct the first pay rise entirely into saving, and you will never miss it. Reduce spending where it hurts least, such as subscriptions you do not use, rather than where it hurts most. And check for an employer match, because it effectively halves the amount you need to save yourself.</p>
+<h2>Reviewing the figure</h2><p>Recalculate the monthly figure once a year, or whenever your income, savings or plans change. As your savings grow, the figure falls, because your existing money does more of the work. As you get closer to retirement, the figure rises if you are behind, because there is less time left. An annual review keeps the plan honest and prevents a nasty surprise in your 50s. Keep the review simple: update the numbers, read the new monthly figure, and adjust your contribution if you can.</p>
+<h2>What a pay rise does to the plan</h2><p>Take a 35-year-old saving 500 dollars a month towards a million by 65, at 7 percent. A pay rise of 5,000 dollars a year arrives, and they direct half of it, about 200 dollars a month, into retirement saving, raising the contribution to 700. The extra 200 a month over 30 years adds about 244,000 dollars to the final total, because it compounds for the whole period. The other half of the pay rise, about 200 a month, is spent, so life improves too. The example shows why pay rises are the easiest way to raise contributions: the money was never in your spending, so you never miss it, and the long horizon turns a modest increase into a large final sum. Direct the first pay rise entirely into saving, and the effect is larger still.</p>
+<div class="tip"><strong>Tip:</strong> Each extra 100 dollars a month saved from 30 to 65 adds roughly 180,000 dollars to the final total at 7 percent — which is why directing pay rises into saving is so effective.</div>
+<h2>Frequently Asked Questions</h2><div class="faq"><h3>How much should I save monthly for retirement?</h3><p>It depends on your target, current savings, years left and return. Use the calculator: a 35-year-old with 20,000 saved needs about 780 a month to reach 1,000,000 by 65 at 7 percent.</p><h3>What if I cannot afford the calculated amount?</h3><p>Start with what you can, even half, and raise it by 1 percent of income each year. Direct pay rises into saving before they become spending.</p><h3>How often should I recalculate?</h3><p>Once a year, or when income, savings or plans change. As savings grow, the monthly figure falls.</p></div>
+<h2>Related Guides</h2><ul><li><a href="years-to-retire-calculation.html">Years to Retire: The Calculation</a></li><li><a href="nest-egg-drawdown.html">Nest Egg Drawdown: Making Savings Last</a></li><li><a href="inflation-and-retirement.html">Inflation and Retirement</a></li></ul>
+<p><a href="../index.html">&larr; Back to home</a></p></article></main><footer><p>Retirement Calculator — free online calculators and practical guides. <a href="../about.html">About</a> | <a href="../contact.html">Contact</a> | <a href="../privacy.html">Privacy Policy</a> | <a href="../disclaimer.html">Disclaimer</a></p><p>Results are estimates for general information only.</p></footer></body></html>
