@@ -1,0 +1,98 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Retirement Calculator | Retirement Calculator</title>
+<meta name="description" content="Free retirement savings, years-to-retire, contribution and drawdown calculators with practical guides.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<style>
+body{font-family:Georgia,'Times New Roman',serif;color:#1e293b;background:#f8fafc}
+a{color:#0f766e}header{background:#134e4a;color:#fff;padding:16px 0}
+.header-in{max-width:1020px;margin:0 auto;padding:0 20px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}
+.logo{font-size:clamp(22px,5vw,27px);font-weight:700;color:#fff;text-decoration:none}
+.logo span{color:#5eead4}
+nav a{color:#ccfbf1;margin:0 8px;font-weight:600;font-size:15px;text-decoration:none}
+nav a:hover{color:#fff;text-decoration:underline}
+.hero{background:#0f766e;color:#fff;padding:clamp(28px,6vw,50px) 20px 42px}
+.hero-in{max-width:1020px;margin:0 auto}
+.hero h1{font-size:clamp(28px,6vw,40px);line-height:1.2;margin:0 0 10px;max-width:640px}
+.hero p{font-size:clamp(15px,3vw,18px);max-width:640px;margin:0 0 22px;color:#ccfbf1}
+.calc{background:#fff;color:#1e293b;max-width:600px;padding:clamp(18px,4vw,28px);border-radius:10px;box-shadow:0 12px 30px rgba(0,0,0,.25);text-align:left}
+.calc h2{font-size:20px;margin:0 0 14px;color:#134e4a}
+.field{margin-bottom:14px}.field label{display:block;font-size:14px;font-weight:700;margin-bottom:5px;color:#475569}
+.btn{background:#0d9488;color:#fff}.btn:hover{background:#0f766e}
+.result{background:#f0fdfa;border:1px solid #5eead4}
+.card{background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:22px;margin-bottom:20px}
+.acard{background:#fff;border:1px solid #e2e8f0}
+.acard h3 a{color:#134e4a;text-decoration:none}.acard p{color:#64748b}
+.toolgrid a{background:#fff;border:1px solid #e2e8f0;color:#134e4a}
+.toolgrid a:hover{border-color:#0d9488;background:#f0fdfa}
+.tip{background:#f0fdfa;border-left:4px solid #0d9488}
+h2{color:#134e4a}footer{color:#64748b;font-size:14px;margin-top:30px;padding:20px;text-align:center;border-top:1px solid #e2e8f0}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;line-height:1.65;font-size:16px}
+img{max-width:100%;height:auto}
+input,select,textarea,button{font-family:inherit;font-size:16px}
+input,select{width:100%;min-height:44px;padding:11px 12px;border:1px solid #cbd5e1;border-radius:8px}
+button,.btn{min-height:44px;padding:12px 22px;border:0;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;text-decoration:none;display:inline-block;text-align:center}
+.wrap{max-width:1020px;margin:0 auto;padding:0 20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px}
+.acard{overflow:hidden;border-radius:12px}
+.acard img{width:100%;height:160px;object-fit:cover;display:block}
+.acard div{padding:14px}
+.acard h3{margin:0 0 6px;font-size:16px;line-height:1.35}
+.acard p{margin:0;font-size:14px}
+.toolgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px}
+.toolgrid a{padding:18px;border-radius:12px;text-decoration:none;display:block;font-weight:700}
+.result{padding:16px;border-radius:10px;margin-top:16px}
+.result .big{font-size:clamp(22px,5vw,28px);font-weight:800}
+.tip{padding:14px 16px;border-radius:10px;margin:18px 0}
+.faq h3{font-size:16px;margin:18px 0 4px}
+article img.heroimg{width:100%;max-height:380px;object-fit:cover;border-radius:12px;display:block}
+@media(max-width:640px){
+  .wrap{padding:0 14px}
+  .grid,.toolgrid{grid-template-columns:1fr}
+  .acard img{height:180px}
+  nav a{margin:0 6px}
+}
+@media(max-width:480px){
+  body{font-size:16px}
+  .wrap{padding:0 12px}
+  h1{font-size:26px !important}
+  .btn,button{width:100%}
+  .acard img{height:170px}
+}
+</style></head>
+<body><header><div class="header-in"><a class="logo" href="index.html">Retirement Calculator</a><nav><a href="index.html">Home</a><a href="tools/retirement-calculator.html">Calculator</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav></div></header><section class="hero"><div class="hero-in"><h1>Retirement Calculator — Project Your Retirement Savings</h1><p>See how much you could have at retirement, how long it will take, and what you need to save each month — with clear, honest projections.</p><div class="calc"><h2>Retirement Calculator</h2><div class="field"><label for="age">Your current age</label><input type="number" id="age" value="30" min="18" max="70"></div>
+<div class="field"><label for="rage">Planned retirement age</label><input type="number" id="rage" value="65" min="40" max="80"></div>
+<div class="field"><label for="cur">Current savings ($)</label><input type="number" id="cur" value="10000" min="0" max="100000000"></div>
+<div class="field"><label for="mon">Monthly contribution ($)</label><input type="number" id="mon" value="500" min="0" max="100000"></div>
+<div class="field"><label for="ret">Expected annual return (%)</label><input type="number" id="ret" value="7" min="0" max="15" step="0.5"></div>
+<div class="field"><label for="inf">Expected annual inflation (%)</label><input type="number" id="inf" value="3" min="0" max="10" step="0.5"></div>
+<button class="btn" type="button" onclick="calcRet()">Project My Savings</button>
+<div id="out" class="result" style="display:none"></div>
+<script>
+function fmt(n){return '$'+Math.round(n).toLocaleString();}
+function calcRet(){
+  var age=parseFloat(document.getElementById('age').value);
+  var rage=parseFloat(document.getElementById('rage').value);
+  var cur=parseFloat(document.getElementById('cur').value);
+  var mon=parseFloat(document.getElementById('mon').value);
+  var ret=parseFloat(document.getElementById('ret').value)/100;
+  var inf=parseFloat(document.getElementById('inf').value)/100;
+  var out=document.getElementById('out');
+  if(isNaN(age)||isNaN(rage)||isNaN(cur)||isNaN(mon)||isNaN(ret)||isNaN(inf)||age<18||age>70||rage<40||rage>80||rage<=age||cur<0||mon<0){
+    out.style.display='block';out.innerHTML='Please check your entries: retirement age must be above your current age, and all numbers must be in range.';return;}
+  var years=rage-age, months=years*12;
+  var m=ret/12;
+  var fv = m===0 ? cur+mon*months : cur*Math.pow(1+m,months)+mon*(Math.pow(1+m,months)-1)/m;
+  var real=fv/Math.pow(1+inf,years);
+  var totalIn=cur+mon*months;
+  var growth=fv-totalIn;
+  out.style.display='block';
+  out.innerHTML='<p>At age '+rage+', after '+years+' years, your savings are projected to be</p><p class="big">'+fmt(fv)+'</p>'
+   +'<p>In present-day money (adjusted for '+document.getElementById('inf').value+'% inflation): about <strong>'+fmt(real)+'</strong>.</p>'
+   +'<p>You will have contributed <strong>'+fmt(totalIn)+'</strong> in total, and investment growth adds about <strong>'+fmt(growth)+'</strong>.</p>'
+   +'<p>This is a projection, not a promise: real returns vary year to year, and the assumed '+document.getElementById('ret').value+'% return is an example you can change. Starting earlier matters more than the exact rate, because growth compounds over time.</p>';
+}
+</script></div></div></section><main class="wrap"><section><h2>How It Works</h2><p>Our retirement calculator projects your savings to retirement using compound growth: your current savings grow, your monthly contributions grow, and the result is shown both in future dollars and in today's money after inflation. Try it in the <a href="tools/retirement-calculator.html">main calculator</a>, then use the <a href="tools/monthly-contribution-calculator.html">monthly contribution calculator</a> to find the saving rate that reaches your target.</p><p>If you want the method, <a href="guides/how-to-use-retirement-calculator.html">how to use the retirement calculator</a> explains each input, <a href="guides/compound-interest-retirement.html">compound interest and retirement</a> shows why starting early matters, and <a href="guides/how-much-to-save-for-retirement.html">how much to save for retirement</a> explains the 25-times rule with a worked example.</p><p>For the later stages, the <a href="tools/nest-egg-drawdown-planner.html">nest egg drawdown planner</a> shows how much you can withdraw each month, and <a href="guides/nest-egg-drawdown.html">making savings last</a> explains the 4 percent guideline. Do not forget <a href="guides/inflation-and-retirement.html">inflation and retirement</a> — at 3 percent, prices double in about 24 years.</p></section><section><h2>All Calculators</h2><div class="toolgrid"><a href="tools/retirement-calculator.html"><strong>Retirement Calculator</strong><br><span style="font-weight:400;font-size:14px">Project your retirement savings from your age, current savings, monthly contributions and expected return.</span></a><a href="tools/years-to-retire-calculator.html"><strong>Years to Retire Calculator</strong><br><span style="font-weight:400;font-size:14px">Find out how many years it will take to reach your retirement savings target.</span></a><a href="tools/monthly-contribution-calculator.html"><strong>Monthly Contribution Calculator</strong><br><span style="font-weight:400;font-size:14px">Work out how much you need to save each month to reach your retirement target.</span></a><a href="tools/nest-egg-drawdown-planner.html"><strong>Nest Egg Drawdown Planner</strong><br><span style="font-weight:400;font-size:14px">Plan how much you can withdraw each month in retirement, and how long your savings will last.</span></a></div></section><section><h2>Guides</h2><div class="grid"><div class="acard"><a href="guides/how-to-use-retirement-calculator.html"><img src="images/how-to-use-retirement-calculator.jpg" alt="How to Use a Retirement Calculator" loading="lazy"></a><div><h3><a href="guides/how-to-use-retirement-calculator.html">How to Use a Retirement Calculator</a></h3><p>A step-by-step guide to projecting your retirement savings from your age, savings, contributions and return.</p></div></div><div class="acard"><a href="guides/how-much-to-save-for-retirement.html"><img src="images/how-much-to-save-for-retirement.jpg" alt="How Much to Save for Retirement" loading="lazy"></a><div><h3><a href="guides/how-much-to-save-for-retirement.html">How Much to Save for Retirement</a></h3><p>How to work out your retirement savings target, from your spending to the 25-times rule, with worked examples.</p></div></div><div class="acard"><a href="guides/compound-interest-retirement.html"><img src="images/compound-interest-retirement.jpg" alt="Compound Interest and Retirement" loading="lazy"></a><div><h3><a href="guides/compound-interest-retirement.html">Compound Interest and Retirement</a></h3><p>How compounding turns small monthly savings into a large retirement pot, with worked examples over 10, 20 and 30 years.</p></div></div><div class="acard"><a href="guides/starting-retirement-savings-20s.html"><img src="images/starting-retirement-savings-20s.jpg" alt="Starting Retirement Savings in Your 20s" loading="lazy"></a><div><h3><a href="guides/starting-retirement-savings-20s.html">Starting Retirement Savings in Your 20s</a></h3><p>Why your 20s are the most valuable decade for retirement saving, and how to start with small amounts.</p></div></div><div class="acard"><a href="guides/starting-retirement-savings-40s.html"><img src="images/starting-retirement-savings-40s.jpg" alt="Starting Retirement Savings in Your 40s" loading="lazy"></a><div><h3><a href="guides/starting-retirement-savings-40s.html">Starting Retirement Savings in Your 40s</a></h3><p>How to catch up on retirement saving in your 40s, when time is shorter but income is usually higher.</p></div></div><div class="acard"><a href="guides/retirement-savings-by-age-guide.html"><img src="images/retirement-savings-by-age-guide.jpg" alt="Retirement Savings by Age" loading="lazy"></a><div><h3><a href="guides/retirement-savings-by-age-guide.html">Retirement Savings by Age</a></h3><p>The savings benchmarks for each decade, what they mean, and how to use them without panicking.</p></div></div><div class="acard"><a href="guides/monthly-contribution-needed.html"><img src="images/monthly-contribution-needed.jpg" alt="How Much to Save Each Month for Retirement" loading="lazy"></a><div><h3><a href="guides/monthly-contribution-needed.html">How Much to Save Each Month for Retirement</a></h3><p>How to calculate the monthly contribution that reaches your target, and how small increases change the outcome.</p></div></div><div class="acard"><a href="guides/years-to-retire-calculation.html"><img src="images/years-to-retire-calculation.jpg" alt="Years to Retire: The Calculation" loading="lazy"></a><div><h3><a href="guides/years-to-retire-calculation.html">Years to Retire: The Calculation</a></h3><p>How to work out how many years until you can retire, and which levers shorten the wait the most.</p></div></div><div class="acard"><a href="guides/nest-egg-drawdown.html"><img src="images/nest-egg-drawdown.jpg" alt="Nest Egg Drawdown: Making Savings Last" loading="lazy"></a><div><h3><a href="guides/nest-egg-drawdown.html">Nest Egg Drawdown: Making Savings Last</a></h3><p>How to withdraw from retirement savings without running out, the 4 percent guideline, and how inflation changes the plan.</p></div></div><div class="acard"><a href="guides/inflation-and-retirement.html"><img src="images/inflation-and-retirement.jpg" alt="Inflation and Retirement" loading="lazy"></a><div><h3><a href="guides/inflation-and-retirement.html">Inflation and Retirement</a></h3><p>How inflation erodes savings and income, why it matters more in retirement, and how to protect your plan.</p></div></div><div class="acard"><a href="guides/retirement-income-needs.html"><img src="images/retirement-income-needs.jpg" alt="Retirement Income Needs" loading="lazy"></a><div><h3><a href="guides/retirement-income-needs.html">Retirement Income Needs</a></h3><p>How to estimate the income you will need in retirement, from spending to pensions, with a worked example.</p></div></div><div class="acard"><a href="guides/emergency-fund-before-retirement.html"><img src="images/emergency-fund-before-retirement.jpg" alt="Emergency Fund Before Retirement Saving" loading="lazy"></a><div><h3><a href="guides/emergency-fund-before-retirement.html">Emergency Fund Before Retirement Saving</a></h3><p>Why an emergency fund comes first, how big it should be, and how to build it without stopping retirement saving.</p></div></div><div class="acard"><a href="guides/employer-match-explained.html"><img src="images/employer-match-explained.jpg" alt="Employer Match Explained" loading="lazy"></a><div><h3><a href="guides/employer-match-explained.html">Employer Match Explained</a></h3><p>How employer matching works, why it is the best return in retirement saving, and how to make sure you get the full match.</p></div></div><div class="acard"><a href="guides/catch-up-contributions.html"><img src="images/catch-up-contributions.jpg" alt="Catch-Up Contributions After 50" loading="lazy"></a><div><h3><a href="guides/catch-up-contributions.html">Catch-Up Contributions After 50</a></h3><p>How extra contributions after 50 can close a retirement gap, with examples of what they add.</p></div></div><div class="acard"><a href="guides/retiring-early-guide.html"><img src="images/retiring-early-guide.jpg" alt="Retiring Early: A Guide" loading="lazy"></a><div><h3><a href="guides/retiring-early-guide.html">Retiring Early: A Guide</a></h3><p>What early retirement really costs, how to plan for a longer retirement, and the trade-offs to think about.</p></div></div><div class="acard"><a href="guides/semi-retirement-planning.html"><img src="images/semi-retirement-planning.jpg" alt="Semi-Retirement Planning" loading="lazy"></a><div><h3><a href="guides/semi-retirement-planning.html">Semi-Retirement Planning</a></h3><p>How to wind down gradually with part-time work, what it does to your savings, and how to plan the transition.</p></div></div><div class="acard"><a href="guides/retirement-mistakes-to-avoid.html"><img src="images/retirement-mistakes-to-avoid.jpg" alt="Retirement Mistakes to Avoid" loading="lazy"></a><div><h3><a href="guides/retirement-mistakes-to-avoid.html">Retirement Mistakes to Avoid</a></h3><p>The most common errors in retirement planning, from starting too late to ignoring inflation, and how to fix each one.</p></div></div><div class="acard"><a href="guides/reviewing-your-retirement-plan.html"><img src="images/reviewing-your-retirement-plan.jpg" alt="Reviewing Your Retirement Plan" loading="lazy"></a><div><h3><a href="guides/reviewing-your-retirement-plan.html">Reviewing Your Retirement Plan</a></h3><p>How to review your retirement plan once a year, what to check, and when to change course.</p></div></div><div class="acard"><a href="guides/retirement-and-healthcare-costs.html"><img src="images/retirement-and-healthcare-costs.jpg" alt="Retirement and Healthcare Costs" loading="lazy"></a><div><h3><a href="guides/retirement-and-healthcare-costs.html">Retirement and Healthcare Costs</a></h3><p>How to plan for healthcare costs in retirement, why they rise, and the steps that keep them manageable.</p></div></div><div class="acard"><a href="guides/worked-example-retirement-plan.html"><img src="images/worked-example-retirement-plan.jpg" alt="A Worked Example: A Complete Retirement Plan" loading="lazy"></a><div><h3><a href="guides/worked-example-retirement-plan.html">A Worked Example: A Complete Retirement Plan</a></h3><p>A full retirement plan for a 35-year-old couple, from spending to savings target to monthly contributions.</p></div></div></div><p style="margin-top:16px"><a class="btn" href="guides/how-to-use-retirement-calculator.html">Browse all guides</a></p></section><section><h2>Frequently Asked Questions</h2><div class="faq"><h3>How much do I need to retire?</h3><p>A common rule is 25 times your annual retirement spending. If you expect to spend 40,000 a year, the target is about 1,000,000.</p><h3>How much should I save each month?</h3><p>It depends on your target, current savings, years left and return. A 35-year-old with 20,000 saved needs about 690 a month to reach 1,000,000 by 65 at 7 percent.</p><h3>Is it too late to start at 40?</h3><p>No. You still have 20 to 25 years, and income is often at its highest. The monthly amount matters more now than starting early did.</p><h3>What return should I assume?</h3><p>Around 7 percent a year before inflation is a common planning figure, but real returns vary. Test 5 percent too.</p><h3>What is the 4 percent rule?</h3><p>Withdraw 4 percent of your starting balance in the first year, then adjust for inflation. It has historically lasted about 30 years, but it is a guideline, not a guarantee.</p><h3>Is my data stored anywhere?</h3><p>No. The calculation runs in your browser, and nothing you enter is sent or stored.</p></div></section></main><footer><p>Retirement Calculator — free online calculators and practical guides. <a href="about.html">About</a> | <a href="contact.html">Contact</a> | <a href="privacy.html">Privacy Policy</a> | <a href="disclaimer.html">Disclaimer</a></p><p>Results are estimates for general information only.</p></footer></body></html>
