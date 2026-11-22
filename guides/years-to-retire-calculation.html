@@ -1,0 +1,78 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Years to Retire: The Calculation | Retirement Calculator</title>
+<meta name="description" content="How to work out how many years until you can retire, and which levers shorten the wait the most.">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<style>
+body{font-family:Georgia,'Times New Roman',serif;color:#1e293b;background:#f8fafc}
+a{color:#0f766e}header{background:#134e4a;color:#fff;padding:16px 0}
+.header-in{max-width:1020px;margin:0 auto;padding:0 20px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}
+.logo{font-size:clamp(22px,5vw,27px);font-weight:700;color:#fff;text-decoration:none}
+.logo span{color:#5eead4}
+nav a{color:#ccfbf1;margin:0 8px;font-weight:600;font-size:15px;text-decoration:none}
+nav a:hover{color:#fff;text-decoration:underline}
+.hero{background:#0f766e;color:#fff;padding:clamp(28px,6vw,50px) 20px 42px}
+.hero-in{max-width:1020px;margin:0 auto}
+.hero h1{font-size:clamp(28px,6vw,40px);line-height:1.2;margin:0 0 10px;max-width:640px}
+.hero p{font-size:clamp(15px,3vw,18px);max-width:640px;margin:0 0 22px;color:#ccfbf1}
+.calc{background:#fff;color:#1e293b;max-width:600px;padding:clamp(18px,4vw,28px);border-radius:10px;box-shadow:0 12px 30px rgba(0,0,0,.25);text-align:left}
+.calc h2{font-size:20px;margin:0 0 14px;color:#134e4a}
+.field{margin-bottom:14px}.field label{display:block;font-size:14px;font-weight:700;margin-bottom:5px;color:#475569}
+.btn{background:#0d9488;color:#fff}.btn:hover{background:#0f766e}
+.result{background:#f0fdfa;border:1px solid #5eead4}
+.card{background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:22px;margin-bottom:20px}
+.acard{background:#fff;border:1px solid #e2e8f0}
+.acard h3 a{color:#134e4a;text-decoration:none}.acard p{color:#64748b}
+.toolgrid a{background:#fff;border:1px solid #e2e8f0;color:#134e4a}
+.toolgrid a:hover{border-color:#0d9488;background:#f0fdfa}
+.tip{background:#f0fdfa;border-left:4px solid #0d9488}
+h2{color:#134e4a}footer{color:#64748b;font-size:14px;margin-top:30px;padding:20px;text-align:center;border-top:1px solid #e2e8f0}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;line-height:1.65;font-size:16px}
+img{max-width:100%;height:auto}
+input,select,textarea,button{font-family:inherit;font-size:16px}
+input,select{width:100%;min-height:44px;padding:11px 12px;border:1px solid #cbd5e1;border-radius:8px}
+button,.btn{min-height:44px;padding:12px 22px;border:0;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;text-decoration:none;display:inline-block;text-align:center}
+.wrap{max-width:1020px;margin:0 auto;padding:0 20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px}
+.acard{overflow:hidden;border-radius:12px}
+.acard img{width:100%;height:160px;object-fit:cover;display:block}
+.acard div{padding:14px}
+.acard h3{margin:0 0 6px;font-size:16px;line-height:1.35}
+.acard p{margin:0;font-size:14px}
+.toolgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px}
+.toolgrid a{padding:18px;border-radius:12px;text-decoration:none;display:block;font-weight:700}
+.result{padding:16px;border-radius:10px;margin-top:16px}
+.result .big{font-size:clamp(22px,5vw,28px);font-weight:800}
+.tip{padding:14px 16px;border-radius:10px;margin:18px 0}
+.faq h3{font-size:16px;margin:18px 0 4px}
+article img.heroimg{width:100%;max-height:380px;object-fit:cover;border-radius:12px;display:block}
+@media(max-width:640px){
+  .wrap{padding:0 14px}
+  .grid,.toolgrid{grid-template-columns:1fr}
+  .acard img{height:180px}
+  nav a{margin:0 6px}
+}
+@media(max-width:480px){
+  body{font-size:16px}
+  .wrap{padding:0 12px}
+  h1{font-size:26px !important}
+  .btn,button{width:100%}
+  .acard img{height:170px}
+}
+</style></head>
+<body><header><div class="header-in"><a class="logo" href="../index.html">Retirement Calculator</a><nav><a href="../index.html">Home</a><a href="../tools/retirement-calculator.html">Calculator</a><a href="../about.html">About</a><a href="../contact.html">Contact</a></nav></div></header><main class="wrap"><article class="card" style="margin-top:20px"><img class="heroimg" src="../images/years-to-retire-calculation.jpg" alt="Years to Retire: The Calculation">
+<h1>Years to Retire: The Calculation</h1><p><em>How to work out how many years until you can retire, and which levers shorten the wait the most.</em></p>
+<p>The question how many years until I can retire is the most motivating one in retirement planning, because the answer is a date, not a balance. The calculation depends on your savings, your monthly contributions, your target, and the return you assume. This guide explains the maths, shows worked examples, and explains which changes shorten the wait the most.</p>
+<h2>The calculation</h2><p>The calculator solves for time: given your current savings, your monthly contribution, and an assumed return, how long until the balance reaches your target? The maths uses compound growth, so the answer is not simply the gap divided by the annual saving. Early years add little, because the balance is small, and later years add a lot, because the balance is large. That is why the timeline shortens surprisingly fast when you increase contributions: the extra money compounds for the whole remaining period.</p>
+<h2>Worked example</h2><p>A 30-year-old with 10,000 saved, contributing 500 a month, targeting 1,000,000 at a 7 percent return, reaches the target in about 35 years, at age 65. Contributing 750 a month instead shortens it to about 30 years, age 60. Contributing 1,000 a month shortens it to about 26 to 27 years, age 56 or 57. Doubling the contribution from 500 to 1,000 saves eight years, which shows how powerful the monthly figure is. Lowering the target to 750,000 with 500 a month gives about 31 years instead of 36.</p>
+<h2>Which lever matters most</h2><p>The monthly contribution is usually the strongest lever you control, because it directly adds money every month and each addition compounds. The return assumption matters too, but you cannot control it, and assuming a higher return to shorten the timeline is wishful thinking, not planning. Retiring later is a powerful lever, because it adds years of contributions and growth and shortens the retirement the money must fund. Reducing the target, by planning to spend less in retirement, is also effective, though it means a simpler retirement.</p>
+<h2>The danger of an optimistic return</h2><p>Assuming a 10 percent return instead of 7 percent shortens the timeline dramatically on paper, but real returns are uncertain, and a plan built on optimism can fail badly. Test the timeline at 5 percent as well as 7 percent, and plan around the cautious figure. If the cautious timeline is acceptable, the optimistic one is a bonus. A plan that only works with a high return is not a plan; it is a hope.</p>
+<h2>Using the answer</h2><p>Once you have a date, use it. If it is later than you hoped, choose a lever: save more, retire later, or lower the target, and recalculate. If it is earlier than you expected, you have options: retire earlier, save less, or keep going for a larger margin. Revisit the calculation once a year, because income, savings and markets all change. The date is a planning tool, not a promise, and a plan that is reviewed yearly stays honest.</p>
+<h2>Retiring at 60 instead of 65</h2><p>Take a 35-year-old with 50,000 saved, contributing 800 dollars a month, targeting 1,000,000 at 7 percent. Retiring at 65, the horizon is 30 years, and the projection reaches about 1,380,000, so the target is met with room to spare. Retiring at 60, the horizon is 25 years, and the projection reaches about 934,000, short of the target. To retire at 60, the contribution must rise to about 880 a month, or the target must fall to 934,000, or a combination. The example shows the trade-off clearly: five years earlier costs about 450,000 in the final total, and the choice is between saving more, spending less, or working longer. The calculator makes the trade-off visible, so the decision is informed rather than guessed.</p>
+<div class="tip"><strong>Tip:</strong> Doubling the monthly contribution from 500 to 1,000 dollars shortens the wait by about eight years for a 30-year-old targeting a million — the contribution is the strongest lever you control.</div>
+<h2>Frequently Asked Questions</h2><div class="faq"><h3>How many years until I can retire?</h3><p>It depends on savings, monthly contributions, target and return. A 30-year-old with 10,000 saved, contributing 500 a month at 7 percent, reaches 1,000,000 in about 36 years.</p><h3>What shortens the wait most?</h3><p>Saving more each month. Doubling the contribution from 500 to 1,000 shortens the timeline by about eight years in the example above.</p><h3>Should I assume a high return to retire sooner?</h3><p>No. Plan around a cautious return, such as 5 to 7 percent. A plan that only works with a high return is a hope, not a plan.</p></div>
+<h2>Related Guides</h2><ul><li><a href="nest-egg-drawdown.html">Nest Egg Drawdown: Making Savings Last</a></li><li><a href="inflation-and-retirement.html">Inflation and Retirement</a></li><li><a href="retirement-income-needs.html">Retirement Income Needs</a></li></ul>
+<p><a href="../index.html">&larr; Back to home</a></p></article></main><footer><p>Retirement Calculator — free online calculators and practical guides. <a href="../about.html">About</a> | <a href="../contact.html">Contact</a> | <a href="../privacy.html">Privacy Policy</a> | <a href="../disclaimer.html">Disclaimer</a></p><p>Results are estimates for general information only.</p></footer></body></html>

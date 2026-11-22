@@ -1,0 +1,78 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A Worked Example: A Complete Retirement Plan | Retirement Calculator</title>
+<meta name="description" content="A full retirement plan for a 35-year-old couple, from spending to savings target to monthly contributions.">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<style>
+body{font-family:Georgia,'Times New Roman',serif;color:#1e293b;background:#f8fafc}
+a{color:#0f766e}header{background:#134e4a;color:#fff;padding:16px 0}
+.header-in{max-width:1020px;margin:0 auto;padding:0 20px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}
+.logo{font-size:clamp(22px,5vw,27px);font-weight:700;color:#fff;text-decoration:none}
+.logo span{color:#5eead4}
+nav a{color:#ccfbf1;margin:0 8px;font-weight:600;font-size:15px;text-decoration:none}
+nav a:hover{color:#fff;text-decoration:underline}
+.hero{background:#0f766e;color:#fff;padding:clamp(28px,6vw,50px) 20px 42px}
+.hero-in{max-width:1020px;margin:0 auto}
+.hero h1{font-size:clamp(28px,6vw,40px);line-height:1.2;margin:0 0 10px;max-width:640px}
+.hero p{font-size:clamp(15px,3vw,18px);max-width:640px;margin:0 0 22px;color:#ccfbf1}
+.calc{background:#fff;color:#1e293b;max-width:600px;padding:clamp(18px,4vw,28px);border-radius:10px;box-shadow:0 12px 30px rgba(0,0,0,.25);text-align:left}
+.calc h2{font-size:20px;margin:0 0 14px;color:#134e4a}
+.field{margin-bottom:14px}.field label{display:block;font-size:14px;font-weight:700;margin-bottom:5px;color:#475569}
+.btn{background:#0d9488;color:#fff}.btn:hover{background:#0f766e}
+.result{background:#f0fdfa;border:1px solid #5eead4}
+.card{background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:22px;margin-bottom:20px}
+.acard{background:#fff;border:1px solid #e2e8f0}
+.acard h3 a{color:#134e4a;text-decoration:none}.acard p{color:#64748b}
+.toolgrid a{background:#fff;border:1px solid #e2e8f0;color:#134e4a}
+.toolgrid a:hover{border-color:#0d9488;background:#f0fdfa}
+.tip{background:#f0fdfa;border-left:4px solid #0d9488}
+h2{color:#134e4a}footer{color:#64748b;font-size:14px;margin-top:30px;padding:20px;text-align:center;border-top:1px solid #e2e8f0}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;line-height:1.65;font-size:16px}
+img{max-width:100%;height:auto}
+input,select,textarea,button{font-family:inherit;font-size:16px}
+input,select{width:100%;min-height:44px;padding:11px 12px;border:1px solid #cbd5e1;border-radius:8px}
+button,.btn{min-height:44px;padding:12px 22px;border:0;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;text-decoration:none;display:inline-block;text-align:center}
+.wrap{max-width:1020px;margin:0 auto;padding:0 20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px}
+.acard{overflow:hidden;border-radius:12px}
+.acard img{width:100%;height:160px;object-fit:cover;display:block}
+.acard div{padding:14px}
+.acard h3{margin:0 0 6px;font-size:16px;line-height:1.35}
+.acard p{margin:0;font-size:14px}
+.toolgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px}
+.toolgrid a{padding:18px;border-radius:12px;text-decoration:none;display:block;font-weight:700}
+.result{padding:16px;border-radius:10px;margin-top:16px}
+.result .big{font-size:clamp(22px,5vw,28px);font-weight:800}
+.tip{padding:14px 16px;border-radius:10px;margin:18px 0}
+.faq h3{font-size:16px;margin:18px 0 4px}
+article img.heroimg{width:100%;max-height:380px;object-fit:cover;border-radius:12px;display:block}
+@media(max-width:640px){
+  .wrap{padding:0 14px}
+  .grid,.toolgrid{grid-template-columns:1fr}
+  .acard img{height:180px}
+  nav a{margin:0 6px}
+}
+@media(max-width:480px){
+  body{font-size:16px}
+  .wrap{padding:0 12px}
+  h1{font-size:26px !important}
+  .btn,button{width:100%}
+  .acard img{height:170px}
+}
+</style></head>
+<body><header><div class="header-in"><a class="logo" href="../index.html">Retirement Calculator</a><nav><a href="../index.html">Home</a><a href="../tools/retirement-calculator.html">Calculator</a><a href="../about.html">About</a><a href="../contact.html">Contact</a></nav></div></header><main class="wrap"><article class="card" style="margin-top:20px"><img class="heroimg" src="../images/worked-example-retirement-plan.jpg" alt="A Worked Example: A Complete Retirement Plan">
+<h1>A Worked Example: A Complete Retirement Plan</h1><p><em>A full retirement plan for a 35-year-old couple, from spending to savings target to monthly contributions.</em></p>
+<p>A retirement plan is easier to understand through a complete example than through separate rules. This worked example follows a 35-year-old couple from their spending, through their target, to the monthly saving that gets them there, with the numbers at each step. The figures are examples, and your own numbers will differ, but the method is the same whatever they are.</p>
+<h2>The couple and their spending</h2><p>Maya and Tom are both 35, earning 70,000 dollars a year between them, and spending 50,000 a year. They have 30,000 dollars saved for retirement and a mortgage that will be paid off by 60. They want to retire at 65 and expect to spend 40,000 a year in retirement, after the mortgage ends and work costs disappear. They expect 20,000 a year from state and employer pensions, leaving 20,000 a year to come from their savings.</p>
+<h2>The target</h2><p>Using the 25-times rule, the amount their savings must provide is 25 times 20,000, or 500,000 dollars. That is their target in today&#x27;s money. They have 30 years until 65, and they assume a 7 percent return and 3 percent inflation. The target is a planning figure, not a promise, and they will review it yearly, but it gives them a number to aim at, which is the point of the exercise.</p>
+<h2>The monthly contribution</h2><p>Their 30,000 dollars of savings, growing at 7 percent for 30 years, becomes about 345,000 dollars. That leaves 155,000 to come from contributions. The monthly amount needed is about 130 dollars. That sounds low, and it is, because 30 years of compounding does most of the work. If they save 500 a month instead, they reach about 955,000, nearly double the target, which gives them a large margin or an earlier retirement. The example shows how sensitive the result is to the monthly figure.</p>
+<h2>What if they start later</h2><p>If Maya and Tom wait until 45 to start, with the same 30,000 saved, the savings grow to about 121,000 by 65, leaving 379,000 to come from contributions over 20 years. The monthly amount needed rises to about 730 dollars, more than five times as much, for the same target. If they wait until 55, the monthly amount rises to about 2,540 dollars, which is more than they can afford. The example is the whole argument for starting early, in a single set of numbers.</p>
+<h2>The plan in practice</h2><p>Maya and Tom set up an automatic transfer of 500 dollars a month, the day after payday, into a low-cost diversified retirement fund. They claim the full employer match, which adds more. They review the plan each January, updating the numbers and the target, and they raise the contribution by 1 percent of income each year. They keep an emergency fund separate, and they do not check the balance weekly. The plan is simple, automatic, and reviewed yearly, and that is why it is likely to work.</p>
+<h2>Testing the example at lower returns</h2><p>Test Maya and Tom&#x27;s plan at lower returns to check it is robust. At 7 percent, saving 500 dollars a month from 35 to 65 gives about 955,000. At 5 percent, the same saving gives about 550,000, still above their 500,000 target, so the plan works even at the lower return. At 3 percent, it gives about 365,000, below the target, so the plan would need a slightly higher contribution or a slightly later retirement. The test shows that the plan is robust at 5 percent and marginal at 3 percent, which is useful knowledge: it tells Maya and Tom that the plan is sound but not bulletproof, and that a small increase in saving would make it robust at every return. Test every plan this way, and the result is confidence rather than hope.</p>
+<div class="tip"><strong>Tip:</strong> This couple needs 500,000 dollars by 65 — and saving 500 a month from 35 gets them to about 955,000, nearly double the target. Starting at 45 instead would need 730 a month for the same target.</div>
+<h2>Frequently Asked Questions</h2><div class="faq"><h3>How do I build a complete retirement plan?</h3><p>Start from spending, subtract guaranteed income, multiply the remainder by 25 for the target, then use the calculator to find the monthly saving.</p><h3>What does this example assume?</h3><p>A 7 percent return and 3 percent inflation, which are common planning figures. Test lower returns too, to check the plan is robust.</p><h3>What if I start at 45 instead of 35?</h3><p>The monthly amount rises sharply. In this example, from about 250 a month at 35 to about 750 at 45, for the same target.</p></div>
+<h2>Related Guides</h2><ul><li><a href="how-to-use-retirement-calculator.html">How to Use a Retirement Calculator</a></li><li><a href="how-much-to-save-for-retirement.html">How Much to Save for Retirement</a></li><li><a href="compound-interest-retirement.html">Compound Interest and Retirement</a></li></ul>
+<p><a href="../index.html">&larr; Back to home</a></p></article></main><footer><p>Retirement Calculator — free online calculators and practical guides. <a href="../about.html">About</a> | <a href="../contact.html">Contact</a> | <a href="../privacy.html">Privacy Policy</a> | <a href="../disclaimer.html">Disclaimer</a></p><p>Results are estimates for general information only.</p></footer></body></html>
