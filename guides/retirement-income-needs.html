@@ -1,0 +1,78 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Retirement Income Needs | Retirement Calculator</title>
+<meta name="description" content="How to estimate the income you will need in retirement, from spending to pensions, with a worked example.">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<style>
+body{font-family:Georgia,'Times New Roman',serif;color:#1e293b;background:#f8fafc}
+a{color:#0f766e}header{background:#134e4a;color:#fff;padding:16px 0}
+.header-in{max-width:1020px;margin:0 auto;padding:0 20px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}
+.logo{font-size:clamp(22px,5vw,27px);font-weight:700;color:#fff;text-decoration:none}
+.logo span{color:#5eead4}
+nav a{color:#ccfbf1;margin:0 8px;font-weight:600;font-size:15px;text-decoration:none}
+nav a:hover{color:#fff;text-decoration:underline}
+.hero{background:#0f766e;color:#fff;padding:clamp(28px,6vw,50px) 20px 42px}
+.hero-in{max-width:1020px;margin:0 auto}
+.hero h1{font-size:clamp(28px,6vw,40px);line-height:1.2;margin:0 0 10px;max-width:640px}
+.hero p{font-size:clamp(15px,3vw,18px);max-width:640px;margin:0 0 22px;color:#ccfbf1}
+.calc{background:#fff;color:#1e293b;max-width:600px;padding:clamp(18px,4vw,28px);border-radius:10px;box-shadow:0 12px 30px rgba(0,0,0,.25);text-align:left}
+.calc h2{font-size:20px;margin:0 0 14px;color:#134e4a}
+.field{margin-bottom:14px}.field label{display:block;font-size:14px;font-weight:700;margin-bottom:5px;color:#475569}
+.btn{background:#0d9488;color:#fff}.btn:hover{background:#0f766e}
+.result{background:#f0fdfa;border:1px solid #5eead4}
+.card{background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:22px;margin-bottom:20px}
+.acard{background:#fff;border:1px solid #e2e8f0}
+.acard h3 a{color:#134e4a;text-decoration:none}.acard p{color:#64748b}
+.toolgrid a{background:#fff;border:1px solid #e2e8f0;color:#134e4a}
+.toolgrid a:hover{border-color:#0d9488;background:#f0fdfa}
+.tip{background:#f0fdfa;border-left:4px solid #0d9488}
+h2{color:#134e4a}footer{color:#64748b;font-size:14px;margin-top:30px;padding:20px;text-align:center;border-top:1px solid #e2e8f0}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;line-height:1.65;font-size:16px}
+img{max-width:100%;height:auto}
+input,select,textarea,button{font-family:inherit;font-size:16px}
+input,select{width:100%;min-height:44px;padding:11px 12px;border:1px solid #cbd5e1;border-radius:8px}
+button,.btn{min-height:44px;padding:12px 22px;border:0;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;text-decoration:none;display:inline-block;text-align:center}
+.wrap{max-width:1020px;margin:0 auto;padding:0 20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px}
+.acard{overflow:hidden;border-radius:12px}
+.acard img{width:100%;height:160px;object-fit:cover;display:block}
+.acard div{padding:14px}
+.acard h3{margin:0 0 6px;font-size:16px;line-height:1.35}
+.acard p{margin:0;font-size:14px}
+.toolgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px}
+.toolgrid a{padding:18px;border-radius:12px;text-decoration:none;display:block;font-weight:700}
+.result{padding:16px;border-radius:10px;margin-top:16px}
+.result .big{font-size:clamp(22px,5vw,28px);font-weight:800}
+.tip{padding:14px 16px;border-radius:10px;margin:18px 0}
+.faq h3{font-size:16px;margin:18px 0 4px}
+article img.heroimg{width:100%;max-height:380px;object-fit:cover;border-radius:12px;display:block}
+@media(max-width:640px){
+  .wrap{padding:0 14px}
+  .grid,.toolgrid{grid-template-columns:1fr}
+  .acard img{height:180px}
+  nav a{margin:0 6px}
+}
+@media(max-width:480px){
+  body{font-size:16px}
+  .wrap{padding:0 12px}
+  h1{font-size:26px !important}
+  .btn,button{width:100%}
+  .acard img{height:170px}
+}
+</style></head>
+<body><header><div class="header-in"><a class="logo" href="../index.html">Retirement Calculator</a><nav><a href="../index.html">Home</a><a href="../tools/retirement-calculator.html">Calculator</a><a href="../about.html">About</a><a href="../contact.html">Contact</a></nav></div></header><main class="wrap"><article class="card" style="margin-top:20px"><img class="heroimg" src="../images/retirement-income-needs.jpg" alt="Retirement Income Needs">
+<h1>Retirement Income Needs</h1><p><em>How to estimate the income you will need in retirement, from spending to pensions, with a worked example.</em></p>
+<p>Retirement income needs are best estimated from spending, not from income, because spending is what the money must cover. The common shortcut is 70 to 80 percent of pre-retirement income, but your own spending is a better guide, and it changes across retirement. This guide explains how to estimate it, what changes, and how pensions fit in.</p>
+<h2>Start with current spending</h2><p>Add up what you spend in a year, including housing, food, transport, bills, leisure and holidays. Then adjust for retirement: remove costs that will end, such as commuting, work clothes, and retirement contributions, and add costs that will start, such as more travel, hobbies, or healthcare. The result is your expected retirement spending, and it is the foundation of every other number. Track spending for a few months if you do not know it, because most people underestimate it by 10 to 20 percent.</p>
+<h2>The 70 to 80 percent rule</h2><p>A common rule says you need 70 to 80 percent of your pre-retirement income in retirement. It works as a rough check, because work costs disappear and you no longer save for retirement, but it is only a rough check. A person who saved aggressively and lived frugally may need far less than 70 percent, while a person with a large mortgage that will not be paid off may need more than 80 percent. Use your own spending figure where you can, and the percentage only as a cross-check.</p>
+<h2>How spending changes in retirement</h2><p>Spending is not flat across retirement. It is often higher in the early years, when people travel and enjoy new hobbies, lower in the middle years, when life settles into a routine, and higher again in the later years, when healthcare costs rise. Planning for a flat amount is simpler, but it can overstate the middle years and understate the later ones. A realistic plan allows for higher spending early and late, and lower spending in the middle, though the exact pattern varies widely.</p>
+<h2>Counting guaranteed income</h2><p>Your savings do not need to cover all your spending, because other income helps. A state pension, an employer pension, rental income, or part-time work all reduce the amount your savings must provide. Add up the guaranteed income you expect, subtract it from your spending, and the remainder is what your savings must cover. For example, if you expect to spend 40,000 a year and guaranteed income covers 20,000, your savings must provide 20,000, and the 25-times rule gives a target of 500,000 rather than 1,000,000.</p>
+<h2>Worked example</h2><p>A couple earning 80,000 a year spend 55,000. In retirement, they expect to spend 45,000, after the mortgage is paid off and commuting ends. They expect 25,000 a year from state and employer pensions, leaving 20,000 to come from savings. Twenty-five times 20,000 is 500,000. They have 100,000 saved at 50, which grows to about 285,000 by 65, leaving about 215,000 to come from contributions. Saving 800 a month at 7 percent gives about 254,000, so the plan works with a small margin. Saving only 600 a month would give about 190,000, leaving them just short, so they would need a little more, or a slightly later retirement. The example shows how each piece fits together, and how a change in any one piece moves the answer.</p>
+<h2>A spending diary for retirement planning</h2><p>Keep a spending diary for three months before estimating retirement needs. Record every expense, in categories: housing, food, transport, bills, leisure, health, and everything else. At the end of three months, annualise each category by multiplying by four, and adjust for retirement: remove commuting and work clothes, add travel and hobbies, and add a separate line for healthcare. Most people find two surprises: they spend more on food and leisure than they thought, and less on transport than they thought. The diary replaces a guess with a measurement, and the measurement is the foundation of the target. Repeat the diary once a year, because spending changes, and the target should change with it.</p>
+<div class="tip"><strong>Tip:</strong> Your savings only need to cover spending minus guaranteed income — a state pension of 25,000 a year cuts a 1,000,000 target to 500,000 in the worked example.</div>
+<h2>Frequently Asked Questions</h2><div class="faq"><h3>How much income do I need in retirement?</h3><p>Start from your spending, not your income. A common check is 70 to 80 percent of pre-retirement income, but your own spending is a better guide.</p><h3>Does spending stay flat in retirement?</h3><p>Usually not. It is often higher early on for travel, lower in the middle, and higher late on for healthcare.</p><h3>How do pensions change the target?</h3><p>They reduce it. Subtract guaranteed income from spending first, and apply the 25-times rule only to the remainder.</p></div>
+<h2>Related Guides</h2><ul><li><a href="emergency-fund-before-retirement.html">Emergency Fund Before Retirement Saving</a></li><li><a href="employer-match-explained.html">Employer Match Explained</a></li><li><a href="catch-up-contributions.html">Catch-Up Contributions After 50</a></li></ul>
+<p><a href="../index.html">&larr; Back to home</a></p></article></main><footer><p>Retirement Calculator — free online calculators and practical guides. <a href="../about.html">About</a> | <a href="../contact.html">Contact</a> | <a href="../privacy.html">Privacy Policy</a> | <a href="../disclaimer.html">Disclaimer</a></p><p>Results are estimates for general information only.</p></footer></body></html>
